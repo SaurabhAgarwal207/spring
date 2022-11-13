@@ -19,4 +19,9 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 	<bean class="com.springcore.ci.Certi" name="cer" >
 		<constructor-arg><value>Splunk certification</value></constructor-arg>
 	</bean>
+	
+	<bean class="com.springcore.ci.Addition" name="add" >
+	<constructor-arg value="12" />
+	<constructor-arg value="34" />
+	</bean>
 </beans>
