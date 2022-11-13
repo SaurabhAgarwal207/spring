@@ -22,7 +22,7 @@ public class App
         	Book b1=(Book)context.getBean("book2");
         	System.out.println(b1);
         	
-        	Employee e1 = (Employee)context.getBean("employee1");
+        	Employee e1 = (Employee)context.getBean("emp1");
         	System.out.println(e1);
     }
 }

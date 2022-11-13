@@ -1,33 +1,55 @@
 package com.springcore;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
 public class Employee {
 
-	private int employeeId;
-	private String employeeName;
-	private String employeeDesignation;
-	public int getEmployeeId() {
-		return employeeId;
+	private String name;
+	private List<String> phones;
+	private Set<String> addresses;
+	private Map<String,String> courses;
+	private Properties props;
+	public String getName() {
+		return name;
 	}
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getEmployeeName() {
-		return employeeName;
+	public List<String> getPhones() {
+		return phones;
 	}
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
+	public void setPhones(List<String> phones) {
+		this.phones = phones;
 	}
-	public String getEmployeeDesignation() {
-		return employeeDesignation;
+	public Set<String> getAddresses() {
+		return addresses;
 	}
-	public void setEmployeeDesignation(String employeeDesignation) {
-		this.employeeDesignation = employeeDesignation;
+	public void setAddresses(Set<String> addresses) {
+		this.addresses = addresses;
 	}
-	public Employee(int employeeId, String employeeName, String employeeDesignation) {
+	public Map<String, String> getCourses() {
+		return courses;
+	}
+	public void setCourses(Map<String, String> courses) {
+		this.courses = courses;
+	}
+	public Properties getProps() {
+		return props;
+	}
+	public void setProps(Properties props) {
+		this.props = props;
+	}
+	public Employee(String name, List<String> phones, Set<String> addresses, Map<String, String> courses,
+			Properties props) {
 		super();
-		this.employeeId = employeeId;
-		this.employeeName = employeeName;
-		this.employeeDesignation = employeeDesignation;
+		this.name = name;
+		this.phones = phones;
+		this.addresses = addresses;
+		this.courses = courses;
+		this.props = props;
 	}
 	public Employee() {
 		super();
@@ -35,8 +57,8 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeDesignation="
-				+ employeeDesignation + "]";
+		return "Employee [name=" + name + ", phones=" + phones + ", addresses=" + addresses + ", courses=" + courses
+				+ ", props=" + props + "]";
 	}
 	
 }

@@ -20,12 +20,41 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 			<value>Pune</value>
 		</property>
 	</bean>
-	
+
 	<bean class="com.springcore.Book" name="book1">
-	<property name="bookId" value="1" />
-	<property name="bookName" value="Java Basics" />
-	<property name="bookAuthor" value="Mr. Agarwal" />
+		<property name="bookId" value="1" />
+		<property name="bookName" value="Java Basics" />
+		<property name="bookAuthor" value="Mr. Agarwal" />
 	</bean>
-	<bean class="com.springcore.Book" name="book2" p:bookId="2" p:bookName="Complete Reference" p:bookAuthor="James Gowsling" />
-	<bean class="com.springcore.Employee"  name="employee1" p:employeeId="49671" p:employeeName="Saurabh Agarwal" p:employeeDesignation="AVP"/>
+	<bean class="com.springcore.Book" name="book2" p:bookId="2"
+		p:bookName="Complete Reference" p:bookAuthor="James Gowsling" />
+		
+	<bean class="com.springcore.Employee" name="emp1">
+		<property name="name" value="Ramesh" />
+		<property name="phones">
+			<list>
+				<value>874562142</value>
+				<value>45486914</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>Pune</value>
+				<value>Rajasthan</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="java" value="2 months" />
+				<entry key="python" value="1 month" />
+				<entry key="C++" value="1.5 months" />
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="name">Saurabh</prop>
+				<prop key="surname">Agarwal</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
